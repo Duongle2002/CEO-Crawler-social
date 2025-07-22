@@ -7,13 +7,48 @@
   padding: 15px;
   z-index: 9999;
   width: 400px;
+  max-height: 600px;
   font-family: sans-serif;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   font-size: 14px;
+  display: flex; /* Added to enable flex layout */
+  flex-direction: column; /* Stack children vertically */
 }
-.ceo-ui h2 { margin-top: 0; }
-.ceo-ui button, .ceo-ui input { margin-top: 5px; width: 100%; }
-.ceo-ui button#clearData { background: #ff4d4f; color: white; }
-.ceo-ui table { width: 100%; margin-top: 10px; border-collapse: collapse; }
-.ceo-ui th, .ceo-ui td { border: 1px solid #ccc; padding: 4px; font-size: 12px; }
-.ceo-ui td a { word-break: break-all; display: block; }
+
+.ceo-ui h2 { 
+  margin-top: 0; 
+}
+
+.ceo-ui button, 
+.ceo-ui input { 
+  margin-top: 5px; 
+  width: 100%; 
+}
+
+.ceo-ui button#clearData { 
+  background: #ff4d4f; 
+  color: white; 
+}
+
+.ceo-ui .table-container {
+  max-height: 400px; /* Adjust this value based on your needs */
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-top: 10px;
+}
+
+.ceo-ui table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+.ceo-ui th, 
+.ceo-ui td { 
+  border: 1px solid #ccc; 
+  padding: 4px; 
+  font-size: 12px; 
+}
+
+.ceo-ui td a { 
+  word-break: break-all; 
+  display: block; 
+}

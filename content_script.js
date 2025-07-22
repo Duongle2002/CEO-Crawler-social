@@ -205,7 +205,7 @@
             socialHTML = copilotAnswer.outerHTML.slice(0, 5000);
           }
         }
-        const prompt = `Trích xuất đúng 1 link duy nhất đến tài khoản thật của ${domain} từ nội dung HTML sau (chỉ phần body, tối đa 5000 ký tự):\n${socialHTML}\nƯu tiên link bắt đầu bằng https://${domain} và là tài khoản chính thức, hoặc trả lời 'Không tìm thấy' nếu không có.`;
+        const prompt = `Trích xuất đúng 1 link duy nhất đến tài khoản thật của ${domain} từ nội dung HTML sau (chỉ phần body, tối đa 5000 ký tự):\n${socialHTML}\nƯu tiên link bắt đầu bằng https://${domain} và là tài khoản chính thức, hoặc trả lời 'Không tìm thấy' nếu không có,không lấy các link phụ, các post hoặc bài báo.`;
         const link = await askGemini(prompt, "models/gemma-3-12b-it");
         updateRowLink(row, link || "Không tìm thấy", domain);
         saveData();
