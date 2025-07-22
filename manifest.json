@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "CEO Crawler",
+  "version": "1.0",
+  "description": "Tìm CEO từ tên công ty và crawl profile mạng xã hội",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.bing.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.bing.com/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["style.css"],
+    "matches": ["<all_urls>"]
+  }]
+}
