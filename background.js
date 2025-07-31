@@ -1,4 +1,4 @@
-const GEMINI_API_KEY = "AIzaSyCtxEGJDvhpzMpVXO-3-irpAwcCGoiM-Ws"; // 🔑 Thay bằng key thật
+const GEMINI_API_KEY = "API_KEY_CỦA_BẠN"; // 🔑 Thay bằng key thật
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg.action === "fetchHTML") {
